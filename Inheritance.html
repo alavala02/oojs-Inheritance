@@ -1,0 +1,68 @@
+<html>
+    <body>  
+        
+            <script>
+                // this is person and employee information by using the inheritance
+
+
+                    var person=function(Name,Age,Dob,MobileNo){
+                        this.Name=Name;
+                        this.Age=Age;
+                        this.Dob=Dob;
+                        this.MobileNo=MobileNo;
+                        this.getPersonDetails=function(){
+                            console.log("Name: "+this.Name+ " Age: "+this.Age+ " Dob: "+this.Dob+ " MobileNo: "+this.MobileNo)
+                        }
+                    }
+                    
+                    var Empolyee=function(id,salary,dep,mail){
+                        this.id=id;
+                        this.salary=salary;
+                        this.dep=dep;
+                        this.mail=mail;
+        
+                        this.getEmpInfo=function(){
+                            console.log("Id: "+this.id+ " Salary: "+this.salary+ " Dep: "+this.dep+ " Mail: "+this.mail)
+                        }
+                    }
+        
+                    var person1 = new Empolyee(001,20000,"Manger","ramulemati@gmail.com")
+                        person1.__proto__= new person("Ramu",20,30011998,9100640104);
+        
+                        console.log(person1.getPersonDetails());
+                        console.log(person1.getEmpInfo());
+                </script>
+
+
+                <script>
+
+                    // this is car and bus information by using the Inheritance 
+
+                    
+                    var bus=function(seats,tyers,engine){
+                        this.seats=seats;
+                        this.tyers=tyers;
+                        this.engine=engine;
+
+                        this.getbusinfo=function(){
+                            console.log("Seats: "+this.seats+ " Tyers: "+this.tyers+ " Engine: "+this.engine)
+                        }
+                    }
+
+                    var car=function(Yom,milage,typeoffuel){
+                        this.Yom=Yom;
+                        this.milage=milage;
+                        this.typeoffuel=typeoffuel;
+
+                        this.getcarinfo=function(){
+                            console.log("Yom: "+this.Yom+ " Milage: "+this.milage+ " typeoffuel: "+this.typeoffuel)
+                        }
+                    }
+                        var bus1=new car(2019,20,"disel")
+                        bus1.__proto__=new bus(30,6,"Bs6")
+                        bus1.getbusinfo();
+                        bus1.getcarinfo();
+
+                </script>
+    </body>
+</html>
